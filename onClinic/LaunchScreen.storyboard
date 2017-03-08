@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LtI-8v-Apt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LaunchScreen-->
+        <scene sceneID="FDh-jU-dhR">
+            <objects>
+                <viewController title="LaunchScreen" id="LtI-8v-Apt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LVj-S8-bl6"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Ak-mu-Og5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jx5-OA-Cmb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ios_splash" translatesAutoresizingMaskIntoConstraints="NO" id="MTx-2v-5fD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="MTx-2v-5fD" firstAttribute="bottom" secondItem="0Ak-mu-Og5" secondAttribute="top" id="5NI-h9-7Uz"/>
+                            <constraint firstItem="MTx-2v-5fD" firstAttribute="leading" secondItem="jx5-OA-Cmb" secondAttribute="leading" id="8xD-cJ-p9n"/>
+                            <constraint firstAttribute="trailing" secondItem="MTx-2v-5fD" secondAttribute="trailing" id="F8S-LV-cpM"/>
+                            <constraint firstItem="MTx-2v-5fD" firstAttribute="top" secondItem="jx5-OA-Cmb" secondAttribute="top" id="lBz-Li-4fA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L87-Ys-lQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="-253.2233883058471"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ios_splash" width="1328" height="2048"/>
+    </resources>
+</document>

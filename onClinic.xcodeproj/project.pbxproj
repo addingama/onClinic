@@ -13,10 +13,12 @@
 		5D3CD49F1E6FAB6200E0C2DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3CD49D1E6FAB6200E0C2DD /* Main.storyboard */; };
 		5D3CD4A21E6FAB6200E0C2DD /* onClinic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D3CD4A01E6FAB6200E0C2DD /* onClinic.xcdatamodeld */; };
 		5D3CD4A41E6FAB6200E0C2DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3CD4A31E6FAB6200E0C2DD /* Assets.xcassets */; };
-		5D3CD4A71E6FAB6200E0C2DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3CD4A51E6FAB6200E0C2DD /* LaunchScreen.storyboard */; };
 		5D3CD4B21E6FAB6200E0C2DD /* onClinicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3CD4B11E6FAB6200E0C2DD /* onClinicTests.swift */; };
 		5D3CD4BD1E6FAB6200E0C2DD /* onClinicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3CD4BC1E6FAB6200E0C2DD /* onClinicUITests.swift */; };
 		5D3CD4D41E6FD18100E0C2DD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3CD4D31E6FD18100E0C2DD /* Constants.swift */; };
+		5DAEF6BE1E6FD92200A3144F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAEF6BD1E6FD92200A3144F /* LaunchScreen.storyboard */; };
+		5DAEF6C41E6FEA7600A3144F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEF6C31E6FEA7600A3144F /* LoginViewController.swift */; };
+		5DAEF6C61E6FF6CB00A3144F /* DropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEF6C51E6FF6CB00A3144F /* DropShadowView.swift */; };
 		AAA5182DEE5C6A590F071FBF /* Pods_onClinicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2831130591A012514A4372 /* Pods_onClinicTests.framework */; };
 		BD7E1541C2A045B8A37504D4 /* Pods_onClinicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F876E1330E89AC9B403E4406 /* Pods_onClinicUITests.framework */; };
 /* End PBXBuildFile section */
@@ -48,7 +50,6 @@
 		5D3CD49E1E6FAB6200E0C2DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D3CD4A11E6FAB6200E0C2DD /* onClinic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = onClinic.xcdatamodel; sourceTree = "<group>"; };
 		5D3CD4A31E6FAB6200E0C2DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5D3CD4A61E6FAB6200E0C2DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D3CD4A81E6FAB6200E0C2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D3CD4AD1E6FAB6200E0C2DD /* onClinicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = onClinicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3CD4B11E6FAB6200E0C2DD /* onClinicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onClinicTests.swift; sourceTree = "<group>"; };
@@ -57,6 +58,9 @@
 		5D3CD4BC1E6FAB6200E0C2DD /* onClinicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onClinicUITests.swift; sourceTree = "<group>"; };
 		5D3CD4BE1E6FAB6200E0C2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D3CD4D31E6FD18100E0C2DD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5DAEF6BD1E6FD92200A3144F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DAEF6C31E6FEA7600A3144F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = App/Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		5DAEF6C51E6FF6CB00A3144F /* DropShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropShadowView.swift; path = App/Views/DropShadowView.swift; sourceTree = "<group>"; };
 		7A2831130591A012514A4372 /* Pods_onClinicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_onClinicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA34848917057A8DD81D73C /* Pods-onClinicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onClinicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-onClinicTests/Pods-onClinicTests.release.xcconfig"; sourceTree = "<group>"; };
 		ECA43D34AD89830372FEFB8C /* Pods-onClinic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onClinic.release.xcconfig"; path = "Pods/Target Support Files/Pods-onClinic/Pods-onClinic.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		5D3CD4981E6FAB6100E0C2DD /* onClinic */ = {
 			isa = PBXGroup;
 			children = (
+				5D3CD4D51E6FD52B00E0C2DD /* Storyboards */,
 				5D3CD4D21E6FCF9000E0C2DD /* Helpers */,
 				5D3CD4D11E6FCF8A00E0C2DD /* Stores */,
 				5D3CD4D01E6FCF8400E0C2DD /* Controllers */,
@@ -173,8 +178,7 @@
 		5D3CD4CF1E6FCF7D00E0C2DD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5D3CD49D1E6FAB6200E0C2DD /* Main.storyboard */,
-				5D3CD4A51E6FAB6200E0C2DD /* LaunchScreen.storyboard */,
+				5DAEF6C51E6FF6CB00A3144F /* DropShadowView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -183,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				5D3CD49B1E6FAB6200E0C2DD /* MainViewController.swift */,
+				5DAEF6C31E6FEA7600A3144F /* LoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +204,15 @@
 			children = (
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		5D3CD4D51E6FD52B00E0C2DD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5D3CD49D1E6FAB6200E0C2DD /* Main.storyboard */,
+				5DAEF6BD1E6FD92200A3144F /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		88CCA3967B5831EA71DE49E8 /* Frameworks */ = {
@@ -330,7 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D3CD4A71E6FAB6200E0C2DD /* LaunchScreen.storyboard in Resources */,
+				5DAEF6BE1E6FD92200A3144F /* LaunchScreen.storyboard in Resources */,
 				5D3CD4A41E6FAB6200E0C2DD /* Assets.xcassets in Resources */,
 				5D3CD49F1E6FAB6200E0C2DD /* Main.storyboard in Resources */,
 			);
@@ -498,7 +512,9 @@
 				5D3CD4A21E6FAB6200E0C2DD /* onClinic.xcdatamodeld in Sources */,
 				5D3CD49C1E6FAB6200E0C2DD /* MainViewController.swift in Sources */,
 				5D3CD49A1E6FAB6200E0C2DD /* AppDelegate.swift in Sources */,
+				5DAEF6C61E6FF6CB00A3144F /* DropShadowView.swift in Sources */,
 				5D3CD4D41E6FD18100E0C2DD /* Constants.swift in Sources */,
+				5DAEF6C41E6FEA7600A3144F /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,14 +556,6 @@
 				5D3CD49E1E6FAB6200E0C2DD /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5D3CD4A51E6FAB6200E0C2DD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5D3CD4A61E6FAB6200E0C2DD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -651,7 +659,6 @@
 			baseConfigurationReference = F9E804EBD4F24AFD245CE966 /* Pods-onClinic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = T85MAX67XQ;
 				INFOPLIST_FILE = onClinic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -666,7 +673,6 @@
 			baseConfigurationReference = ECA43D34AD89830372FEFB8C /* Pods-onClinic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = T85MAX67XQ;
 				INFOPLIST_FILE = onClinic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

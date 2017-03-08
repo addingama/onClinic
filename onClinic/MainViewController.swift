@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class MainViewController: UIViewController {
 
@@ -18,6 +19,23 @@ class MainViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        let defaults = UserDefaults.standard
+        
+        if defaults.object(forKey: "userLoggedIn") == nil {
+            print("user not logged in")
+            let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+            
+            if (loginVC != nil) {
+                self.navigationController?.present(loginVC, animated: true, completion: nil)
+            }
+        } else {
+            print("userLoggedIn")
+        }
     }
 
 

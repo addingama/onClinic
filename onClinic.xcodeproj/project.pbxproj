@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2059520785EBA4CB3CF41DEE /* Pods_onClinic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95800D94A231949A3D91FD6 /* Pods_onClinic.framework */; };
+		5D32A2701E70FA9800F7AB22 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D32A26F1E70FA9800F7AB22 /* SessionManager.swift */; };
 		5D3CD49A1E6FAB6200E0C2DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3CD4991E6FAB6200E0C2DD /* AppDelegate.swift */; };
 		5D3CD49C1E6FAB6200E0C2DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3CD49B1E6FAB6200E0C2DD /* MainViewController.swift */; };
 		5D3CD49F1E6FAB6200E0C2DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3CD49D1E6FAB6200E0C2DD /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 		5DAEF6BE1E6FD92200A3144F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAEF6BD1E6FD92200A3144F /* LaunchScreen.storyboard */; };
 		5DAEF6C41E6FEA7600A3144F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEF6C31E6FEA7600A3144F /* LoginViewController.swift */; };
 		5DAEF6C61E6FF6CB00A3144F /* DropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEF6C51E6FF6CB00A3144F /* DropShadowView.swift */; };
+		5DAEF6C91E6FFA0F00A3144F /* ChameleonFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DAEF6C71E6FFA0F00A3144F /* ChameleonFramework.framework */; };
+		5DAEF6CA1E6FFA0F00A3144F /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DAEF6C81E6FFA0F00A3144F /* SwiftValidator.framework */; };
 		AAA5182DEE5C6A590F071FBF /* Pods_onClinicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2831130591A012514A4372 /* Pods_onClinicTests.framework */; };
 		BD7E1541C2A045B8A37504D4 /* Pods_onClinicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F876E1330E89AC9B403E4406 /* Pods_onClinicUITests.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +47,7 @@
 		0C934F3AEDE9AFC99CC9E3CF /* Pods-onClinicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onClinicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-onClinicTests/Pods-onClinicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1EB4CC93CEB190909F485D1A /* Pods-onClinicUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onClinicUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-onClinicUITests/Pods-onClinicUITests.release.xcconfig"; sourceTree = "<group>"; };
 		498DF02A0FC5B7FF7FAF6D39 /* Pods-onClinicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onClinicUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-onClinicUITests/Pods-onClinicUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D32A26F1E70FA9800F7AB22 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = App/Helpers/SessionManager.swift; sourceTree = "<group>"; };
 		5D3CD4961E6FAB6100E0C2DD /* onClinic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onClinic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3CD4991E6FAB6200E0C2DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D3CD49B1E6FAB6200E0C2DD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		5DAEF6BD1E6FD92200A3144F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DAEF6C31E6FEA7600A3144F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = App/Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		5DAEF6C51E6FF6CB00A3144F /* DropShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropShadowView.swift; path = App/Views/DropShadowView.swift; sourceTree = "<group>"; };
+		5DAEF6C71E6FFA0F00A3144F /* ChameleonFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChameleonFramework.framework; path = "Pods/../build/Release-iphoneos/ChameleonFramework/ChameleonFramework.framework"; sourceTree = "<group>"; };
+		5DAEF6C81E6FFA0F00A3144F /* SwiftValidator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftValidator.framework; path = "Pods/../build/Release-iphoneos/SwiftValidator/SwiftValidator.framework"; sourceTree = "<group>"; };
 		7A2831130591A012514A4372 /* Pods_onClinicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_onClinicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA34848917057A8DD81D73C /* Pods-onClinicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onClinicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-onClinicTests/Pods-onClinicTests.release.xcconfig"; sourceTree = "<group>"; };
 		ECA43D34AD89830372FEFB8C /* Pods-onClinic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onClinic.release.xcconfig"; path = "Pods/Target Support Files/Pods-onClinic/Pods-onClinic.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DAEF6C91E6FFA0F00A3144F /* ChameleonFramework.framework in Frameworks */,
+				5DAEF6CA1E6FFA0F00A3144F /* SwiftValidator.framework in Frameworks */,
 				2059520785EBA4CB3CF41DEE /* Pods_onClinic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +210,7 @@
 		5D3CD4D21E6FCF9000E0C2DD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5D32A26F1E70FA9800F7AB22 /* SessionManager.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -218,6 +227,8 @@
 		88CCA3967B5831EA71DE49E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5DAEF6C71E6FFA0F00A3144F /* ChameleonFramework.framework */,
+				5DAEF6C81E6FFA0F00A3144F /* SwiftValidator.framework */,
 				F95800D94A231949A3D91FD6 /* Pods_onClinic.framework */,
 				7A2831130591A012514A4372 /* Pods_onClinicTests.framework */,
 				F876E1330E89AC9B403E4406 /* Pods_onClinicUITests.framework */,
@@ -515,6 +526,7 @@
 				5DAEF6C61E6FF6CB00A3144F /* DropShadowView.swift in Sources */,
 				5D3CD4D41E6FD18100E0C2DD /* Constants.swift in Sources */,
 				5DAEF6C41E6FEA7600A3144F /* LoginViewController.swift in Sources */,
+				5D32A2701E70FA9800F7AB22 /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +672,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T85MAX67XQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos/ChameleonFramework",
+					"$(PROJECT_DIR)/build/Release-iphoneos/SwiftValidator",
+				);
 				INFOPLIST_FILE = onClinic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = id.AGB.onClinic;
@@ -674,6 +691,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T85MAX67XQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos/ChameleonFramework",
+					"$(PROJECT_DIR)/build/Release-iphoneos/SwiftValidator",
+				);
 				INFOPLIST_FILE = onClinic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = id.AGB.onClinic;

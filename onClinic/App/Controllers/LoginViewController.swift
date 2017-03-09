@@ -43,6 +43,7 @@ class LoginViewController: UIViewController, ValidationDelegate, UITextFieldDele
         }
 
         
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,12 +63,14 @@ class LoginViewController: UIViewController, ValidationDelegate, UITextFieldDele
     
     
     @IBAction func btnRegister(_ sender: UIButton) {
+        let url = URL(string: "\(Backend.baseURL)/register")!
+        UIApplication.shared.open(url, options: [:])
     }
     
     func doLogin() {
         showLoading()
         let parameters: Parameters = ["username": tfUsername.text!, "password": tfPassword.text!]
-        Alamofire.request("\(Backend.apiURL)/user-login/login", method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
+        Alamofire.request(ApiManager.login, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
             .responseJSON { (response) in
                 self.hideLoading()
                 // debugPrint(response)
@@ -87,7 +90,7 @@ class LoginViewController: UIViewController, ValidationDelegate, UITextFieldDele
                             
                             self.session.setAuthToken(token: token)
                             self.session.setLoginStatus(status: true)
-                            
+                            self.clearInputs()
                             self.showMainScene()
                             
                         } else {

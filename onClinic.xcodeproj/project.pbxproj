@@ -17,6 +17,7 @@
 		5D3CD4B21E6FAB6200E0C2DD /* onClinicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3CD4B11E6FAB6200E0C2DD /* onClinicTests.swift */; };
 		5D3CD4BD1E6FAB6200E0C2DD /* onClinicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3CD4BC1E6FAB6200E0C2DD /* onClinicUITests.swift */; };
 		5D3CD4D41E6FD18100E0C2DD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3CD4D31E6FD18100E0C2DD /* Constants.swift */; };
+		5D5CDB611E71214000CA9ACF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CDB601E71214000CA9ACF /* ApiManager.swift */; };
 		5DAEF6BE1E6FD92200A3144F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAEF6BD1E6FD92200A3144F /* LaunchScreen.storyboard */; };
 		5DAEF6C41E6FEA7600A3144F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEF6C31E6FEA7600A3144F /* LoginViewController.swift */; };
 		5DAEF6C61E6FF6CB00A3144F /* DropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEF6C51E6FF6CB00A3144F /* DropShadowView.swift */; };
@@ -62,6 +63,7 @@
 		5D3CD4BC1E6FAB6200E0C2DD /* onClinicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onClinicUITests.swift; sourceTree = "<group>"; };
 		5D3CD4BE1E6FAB6200E0C2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D3CD4D31E6FD18100E0C2DD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5D5CDB601E71214000CA9ACF /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = App/Helpers/ApiManager.swift; sourceTree = "<group>"; };
 		5DAEF6BD1E6FD92200A3144F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DAEF6C31E6FEA7600A3144F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = App/Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		5DAEF6C51E6FF6CB00A3144F /* DropShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropShadowView.swift; path = App/Views/DropShadowView.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				5D32A26F1E70FA9800F7AB22 /* SessionManager.swift */,
+				5D5CDB601E71214000CA9ACF /* ApiManager.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D5CDB611E71214000CA9ACF /* ApiManager.swift in Sources */,
 				5D3CD4A21E6FAB6200E0C2DD /* onClinic.xcdatamodeld in Sources */,
 				5D3CD49C1E6FAB6200E0C2DD /* MainViewController.swift in Sources */,
 				5D3CD49A1E6FAB6200E0C2DD /* AppDelegate.swift in Sources */,

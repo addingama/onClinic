@@ -69,8 +69,9 @@ class LoginViewController: UIViewController, ValidationDelegate, UITextFieldDele
     
     func doLogin() {
         showLoading()
-        let parameters: Parameters = ["username": tfUsername.text!, "password": tfPassword.text!]
-        Alamofire.request(ApiManager.login, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
+        let username = tfUsername.text!
+        let password = tfPassword.text!
+        Alamofire.request(SessionRouter.login(username: username, password: password))
             .responseJSON { (response) in
                 self.hideLoading()
                 // debugPrint(response)

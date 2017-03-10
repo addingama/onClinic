@@ -11,9 +11,11 @@ import Foundation
 class ApiManager {
     
     static let login = generateUrl(path: "/user-login/login")
+    static let pharmacy_index = generateUrl(path: "/medicine")
     
     
-    static func generateUrl(path: String) -> String {
+    
+     private static func generateUrl(path: String) -> String {
         return "\(Backend.apiURL)\(path)"
     }
     

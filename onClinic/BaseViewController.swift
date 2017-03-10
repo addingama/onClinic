@@ -32,12 +32,16 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             
             break
         case 1:
-            print("Play\n", terminator: "")
+            print("Appointment\n", terminator: "")
             
-            self.openViewControllerBasedOnIdentifier("PlayVC")
+            self.openViewControllerBasedOnIdentifier("AppointmentVC")
             
             break
         case 2:
+            print("Examination\n", terminator: "")
+            self.openViewControllerBasedOnIdentifier("ExaminationVC")
+            break
+        case 3:
             print("Logout")
             session.logout()
             self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)

@@ -8,12 +8,16 @@
 
 import UIKit
 
+
+
 class BaseViewController: UIViewController, SlideMenuDelegate {
     let session = SessionManager()
+    var user: User = User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        user = session.getUser()
     }
     
     override func didReceiveMemoryWarning() {
@@ -22,32 +26,37 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     }
     
     func slideMenuItemSelectedAtIndex(_ index: Int32) {
-        let topViewController : UIViewController = self.navigationController!.topViewController!
-        print("View Controller is : \(topViewController) \n", terminator: "")
-        switch(index){
-        case 0:
-            print("Home\n", terminator: "")
-
-            self.openViewControllerBasedOnIdentifier("MainVC")
-            
-            break
-        case 1:
-            print("Appointment\n", terminator: "")
-            
-            self.openViewControllerBasedOnIdentifier("AppointmentVC")
-            
-            break
-        case 2:
-            print("Examination\n", terminator: "")
-            self.openViewControllerBasedOnIdentifier("ExaminationVC")
-            break
-        case 3:
-            print("Logout")
-            session.logout()
-            self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
-        default:
-            print("default\n", terminator: "")
-        }
+//        let topViewController : UIViewController = self.navigationController!.topViewController!
+//        print("View Controller is : \(topViewController) \n", terminator: "")
+//        
+//        switch(index){
+//        case 0:
+//            print("Home\n", terminator: "")
+//
+//            self.openViewControllerBasedOnIdentifier("MainVC")
+//            
+//            break
+//        case 1:
+//            print("Appointment\n", terminator: "")
+//            
+//            self.openViewControllerBasedOnIdentifier("AppointmentVC")
+//            
+//            break
+//        case 2:
+//            print("Examination\n", terminator: "")
+//            self.openViewControllerBasedOnIdentifier("ExaminationVC")
+//            break
+//        case 3:
+//            print("Logout")
+//            session.logout()
+//            self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+//        default:
+//            print("default\n", terminator: "")
+//        }
+        
+        let actions: DrawerActions = DrawerActions(vc: self, user: user)
+        actions.drawerActions(index: index)
+        
     }
     
     func openViewControllerBasedOnIdentifier(_ strIdentifier:String){

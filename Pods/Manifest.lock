@@ -4,14 +4,14 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - PickerView (0.3.0)
-  - SlideMenuControllerSwift (3.0.1)
+  - SideMenu (2.2.0)
   - SwiftValidator (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - PickerView
-  - SlideMenuControllerSwift
+  - SideMenu
   - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
 
 EXTERNAL SOURCES:
@@ -33,9 +33,9 @@ SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   PickerView: 1430ac060eba5f56c3d5e27ef0e47e280d083c9b
-  SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
+  SideMenu: eeff6b85456c5c6e14165655691d2033f6b24969
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
 
-PODFILE CHECKSUM: 93c87562826b52dba1b970bc60d04d1484a1d1c6
+PODFILE CHECKSUM: 3db5dfaff4a10f204642cdc9c35586b2829f9793
 
 COCOAPODS: 1.2.0

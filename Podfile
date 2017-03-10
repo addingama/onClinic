@@ -8,7 +8,7 @@ target 'onClinic' do
   # Pods for onClinic
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod ‘Alamofire’, ‘~> 4.4’
-  pod ’SlideMenuControllerSwift’
+  pod ’SideMenu’
   pod ‘PickerView’
   pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'  
 

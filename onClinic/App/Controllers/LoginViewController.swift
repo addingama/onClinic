@@ -35,15 +35,15 @@ class LoginViewController: UIViewController, ValidationDelegate, UITextFieldDele
         validator.registerField(tfUsername, errorLabel: lblErrorUsername, rules: [RequiredRule()])
         validator.registerField(tfPassword, errorLabel: lblErrorPassword, rules: [RequiredRule()])
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         if !session.isLoggedIn() {
             print("user not logged in")
         } else {
             print("userLoggedIn")
-            showMainScene()
+            self.showMainScene()
         }
-
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,20 +81,24 @@ class LoginViewController: UIViewController, ValidationDelegate, UITextFieldDele
                     if let responseJson = response.result.value as? [String: Any] {
                         print("JSON: \(responseJson)")
                         
-                        let status = responseJson["status"] as! Bool
-                        let message = responseJson["message"] as! String
-
-                        if status {
-                            let user = responseJson["data"] as! [String: Any]
-                            let token = user["token"] as! String
+                        if responseJson["status"] != nil {
+                            let status = responseJson["status"] as! Bool
+                            let message = responseJson["message"] as! String
                             
-                            self.session.setAuthToken(token: token)
-                            self.session.setLoginStatus(status: true)
-                            self.clearInputs()
-                            self.showMainScene()
-                            
+                            if status {
+                                let user = responseJson["data"] as! [String: Any]
+                                self.storeSession(user: user)
+                                
+                                
+                                
+                                self.clearInputs()
+                                self.showMainScene()
+                                
+                            } else {
+                                self.showAlert(title: "Error", message: message)
+                            }
                         } else {
-                            self.showAlert(title: "Error", message: message)
+                            self.showAlert(title: "Error", message: "Response data is not valid")
                         }
                     }
                 }
@@ -129,6 +133,21 @@ class LoginViewController: UIViewController, ValidationDelegate, UITextFieldDele
         hideKeyboard()
         
         return true
+    }
+    
+    // MARK: Helper functions
+    
+    func storeSession(user: [String: Any]) {
+        let id = user["id"] as! Int
+        let name = user["name"] as! String
+        let role = user["role"] as! String
+        let token = user["token"] as! String
+        session.setUserId(id: id)
+        session.setUserName(name: name)
+        session.setUserRole(role: role)
+        session.setAuthToken(token: token)
+        session.setLoginStatus(status: true)
+        session.setUser(user: user)
     }
     
     

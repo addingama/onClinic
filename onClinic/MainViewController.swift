@@ -9,16 +9,17 @@
 import UIKit
 import Foundation
 
-class MainViewController: UIViewController {
-    let session = SessionManager()
+
+class MainViewController: BaseViewController {
 
     @IBAction func btnLogout(_ sender: UIButton) {
-        session.logout()
-        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.addSlideMenuButton()
+        self.title = "onClinic"
     }
 
     override func didReceiveMemoryWarning() {

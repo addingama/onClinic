@@ -9,12 +9,18 @@
 import UIKit
 import Alamofire
 
-class PharmacyViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
+class PharmacyViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
 
     var medicines: [Medicine] = []
+    var selected_medicine: Medicine = Medicine()
+    var searchActive : Bool = false
     
+    var filtered: [Medicine] = []
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +29,18 @@ class PharmacyViewController: BaseViewController, UITableViewDataSource, UITable
         self.addSlideMenuButton()
         self.title = "Pharmacy"
         
-        
-        
         tableView.delegate = self
         tableView.dataSource = self
+        searchBar.delegate = self
         
+        tableView.tableHeaderView = searchBar
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonAction))
+        
+    }
+    
+    func addButtonAction() {
+        self.performSegue(withIdentifier: "pharmacyCreate", sender: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,35 +65,136 @@ class PharmacyViewController: BaseViewController, UITableViewDataSource, UITable
     */
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (searchActive) {
+            return filtered.count
+        }
         return medicines.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "MedicineCell", for: indexPath) as! MedicineTableViewCell
         
-        cell.lblName.text = "Name"
+        if (searchActive) {
+            cell.lblName?.text = filtered[indexPath.row].name
+            cell.lblType?.text = filtered[indexPath.row].type
+            cell.lblPrice?.text = "Price : \(filtered[indexPath.row].price!)"
+            cell.lblStock?.text = "Stock : \(filtered[indexPath.row].quantity!)"
+        } else {
+            cell.lblName?.text = medicines[indexPath.row].name
+            cell.lblType?.text = medicines[indexPath.row].type
+            cell.lblPrice?.text = "Price : \(medicines[indexPath.row].price!)"
+            cell.lblStock?.text = "Stock : \(medicines[indexPath.row].quantity!)"
+        }
+        
+        
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selected_medicine = medicines[indexPath.row] as Medicine
+        
+        self.performSegue(withIdentifier: "pharmacyDetail", sender: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        selected_medicine = medicines[indexPath.row] as Medicine
+
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { (action, indexPath) in
+            let deleteAlert = UIAlertController(title: "Delete", message: "Are you sure", preferredStyle: UIAlertControllerStyle.alert)
+            deleteAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                print("delete")
+            }))
+            
+            deleteAlert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action) in
+                print("cancel")
+            }))
+            
+            self.present(deleteAlert, animated: true, completion: nil)
+        }
+        
+        let editAction = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
+            self.performSegue(withIdentifier: "pharmacyEdit", sender: nil)
+        }
+        
+        return [deleteAction, editAction]
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
     }
+    
     
     func getMedicines() {
         Alamofire.request(MedicineRouter.index())
             .responseJSON { (response) in
-                // debugPrint(response)
+                 debugPrint(response)
                 
                 if response.result.value == nil {
                     self.showAlert(title: "Error", message: "Something error with the server. Sorry for the inconvenience")
                 } else {
                     if let responseJson = response.result.value as? [String: Any] {
-                        print("JSON: \(responseJson)")
-                        
+                        if responseJson["status"] != nil {
+                            let data = responseJson["data"] as! NSArray
+                            for medicine in data {
+                                let med = medicine as! [String: Any]
+                                self.medicines.append(Medicine(json: med))
+                            }
+                            self.tableView.reloadData()
+                        }
                     }
                 }
                 
                 
+        }
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filtered = medicines.filter({ (med) -> Bool in
+            return med.name!.range(of: searchText, options: NSString.CompareOptions.caseInsensitive) != nil
+        })
+        
+        if (filtered.count == 0) {
+            searchActive = false
+        } else {
+            searchActive = true
+        }
+        
+        self.tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pharmacyDetail" {
+            if let pharmacyDetailVC = segue.destination as? PharmacyDetailViewController {
+                pharmacyDetailVC.medicine = selected_medicine
+            }
+        }
+        
+        if segue.identifier == "pharmacyEdit" {
+            if let pharmacyEditVC = segue.destination as? PharmacyEditViewController {
+                pharmacyEditVC.medicine = selected_medicine
+            }
         }
     }
     

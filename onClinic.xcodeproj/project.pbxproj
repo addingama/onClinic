@@ -22,6 +22,9 @@
 		5D5CDB611E71214000CA9ACF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CDB601E71214000CA9ACF /* ApiManager.swift */; };
 		5D5CDB631E7127A300CA9ACF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CDB621E7127A300CA9ACF /* User.swift */; };
 		5D5CDB681E71293500CA9ACF /* UserModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CDB671E71293500CA9ACF /* UserModelTests.swift */; };
+		5D65E71C1E763CE5000FE7DC /* PharmacyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D65E71B1E763CE5000FE7DC /* PharmacyDetailViewController.swift */; };
+		5D65E71E1E7664DC000FE7DC /* PharmacyEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D65E71D1E7664DC000FE7DC /* PharmacyEditViewController.swift */; };
+		5D65E7201E76655B000FE7DC /* PharmacyCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D65E71F1E76655B000FE7DC /* PharmacyCreateViewController.swift */; };
 		5DAEF6BE1E6FD92200A3144F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAEF6BD1E6FD92200A3144F /* LaunchScreen.storyboard */; };
 		5DAEF6C41E6FEA7600A3144F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEF6C31E6FEA7600A3144F /* LoginViewController.swift */; };
 		5DAEF6C61E6FF6CB00A3144F /* DropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEF6C51E6FF6CB00A3144F /* DropShadowView.swift */; };
@@ -84,6 +87,9 @@
 		5D5CDB601E71214000CA9ACF /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = App/Helpers/ApiManager.swift; sourceTree = "<group>"; };
 		5D5CDB621E7127A300CA9ACF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = App/Models/User.swift; sourceTree = "<group>"; };
 		5D5CDB671E71293500CA9ACF /* UserModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserModelTests.swift; path = Models/UserModelTests.swift; sourceTree = "<group>"; };
+		5D65E71B1E763CE5000FE7DC /* PharmacyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PharmacyDetailViewController.swift; path = App/Controllers/PharmacyDetailViewController.swift; sourceTree = "<group>"; };
+		5D65E71D1E7664DC000FE7DC /* PharmacyEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PharmacyEditViewController.swift; path = App/Controllers/PharmacyEditViewController.swift; sourceTree = "<group>"; };
+		5D65E71F1E76655B000FE7DC /* PharmacyCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PharmacyCreateViewController.swift; path = App/Controllers/PharmacyCreateViewController.swift; sourceTree = "<group>"; };
 		5DAEF6BD1E6FD92200A3144F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DAEF6C31E6FEA7600A3144F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = App/Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		5DAEF6C51E6FF6CB00A3144F /* DropShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropShadowView.swift; path = App/Views/DropShadowView.swift; sourceTree = "<group>"; };
@@ -252,6 +258,9 @@
 				5DDB01371E72877C003BE350 /* PharmacyViewController.swift */,
 				5DDB01391E7287AB003BE350 /* CashierViewController.swift */,
 				5DDB013B1E728824003BE350 /* ComplaintViewController.swift */,
+				5D65E71B1E763CE5000FE7DC /* PharmacyDetailViewController.swift */,
+				5D65E71D1E7664DC000FE7DC /* PharmacyEditViewController.swift */,
+				5D65E71F1E76655B000FE7DC /* PharmacyCreateViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -607,6 +616,8 @@
 				5D3CD49C1E6FAB6200E0C2DD /* MainViewController.swift in Sources */,
 				5DDB01361E7280C8003BE350 /* DrawerActions.swift in Sources */,
 				5D3CD49A1E6FAB6200E0C2DD /* AppDelegate.swift in Sources */,
+				5D65E71C1E763CE5000FE7DC /* PharmacyDetailViewController.swift in Sources */,
+				5D65E7201E76655B000FE7DC /* PharmacyCreateViewController.swift in Sources */,
 				5DDB013C1E728824003BE350 /* ComplaintViewController.swift in Sources */,
 				5D07518A1E7239C100BAC3E9 /* MenuViewController.swift in Sources */,
 				5DDB01491E72A083003BE350 /* MedicineRouter.swift in Sources */,
@@ -616,6 +627,7 @@
 				5DDB01441E7299ED003BE350 /* MedicineTableViewCell.swift in Sources */,
 				5D5CDB631E7127A300CA9ACF /* User.swift in Sources */,
 				5D3CD4D41E6FD18100E0C2DD /* Constants.swift in Sources */,
+				5D65E71E1E7664DC000FE7DC /* PharmacyEditViewController.swift in Sources */,
 				5DAEF6C41E6FEA7600A3144F /* LoginViewController.swift in Sources */,
 				5D32A2701E70FA9800F7AB22 /* SessionManager.swift in Sources */,
 			);

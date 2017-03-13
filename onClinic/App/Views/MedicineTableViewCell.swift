@@ -11,6 +11,10 @@ import UIKit
 class MedicineTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblType: UILabel!
+    @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var lblStock: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +26,5 @@ class MedicineTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

@@ -17,7 +17,7 @@ enum MedicinesFields: String {
     case TYPE = "type"
     case DATE_STOCK = "date_stock"
     case DATE_EXPIRATION = "date_expiration"
-    case UNIT = "unit"
+    case UNIT_NAME = "unit_name"
 }
 
 class Medicine {
@@ -29,11 +29,21 @@ class Medicine {
     var type: String?
     var dateStock: String?
     var dateExpiration: String?
-    var unit: Unit?
+    var unitName: String?
+    
+    init() {
+        
+    }
     
     required init(json: [String: Any]) {
+        
         self.id = json[MedicinesFields.ID.rawValue] as? Int
-        self.name = json[MedicinesFields.NAME.rawValue] as? String
+        self.name = (json[MedicinesFields.NAME.rawValue] as! NSString) as String
+        self.quantity = (json[MedicinesFields.QUANTITY.rawValue] as! NSString).integerValue
+        self.type = (json[MedicinesFields.TYPE.rawValue] as! NSString) as String
+        self.price = (json[MedicinesFields.PRICE.rawValue] as! NSString).doubleValue
+        self.unitId = json[MedicinesFields.UNIT_ID.rawValue] as? Int
+        self.unitName = (json[MedicinesFields.UNIT_NAME.rawValue] as! NSString) as String
     }
     
 }

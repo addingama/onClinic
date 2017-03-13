@@ -12,11 +12,17 @@ import Alamofire
 enum MedicineRouter: URLRequestConvertible {
     
     case index()
+    case update(Int, Medicine)
+    case delete(Int)
     
     var method: Alamofire.HTTPMethod {
         switch self {
         case .index:
             return .get
+        case .update:
+            return .put
+        case .delete:
+            return .delete
             
         }
     }
@@ -25,7 +31,12 @@ enum MedicineRouter: URLRequestConvertible {
         switch self {
         case .index:
             return "/medicine"
-            
+        case .update(let id, let _):
+            return "/medicine/update?id=\(id)"
+        case .delete(let id):
+            return "/medicine/delete?id=\(id)"
+        default:
+            return ""
         }
     }
     
@@ -37,7 +48,9 @@ enum MedicineRouter: URLRequestConvertible {
         switch self {
         case .index():
             return try Alamofire.JSONEncoding.default.encode(urlRequest)
-        }
+        default:
+            return try Alamofire.JSONEncoding.default.encode(urlRequest)
+                }
         
     }
 }

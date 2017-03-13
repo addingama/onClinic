@@ -77,12 +77,12 @@ class PharmacyViewController: BaseViewController, UITableViewDataSource, UITable
         if (searchActive) {
             cell.lblName?.text = filtered[indexPath.row].name
             cell.lblType?.text = filtered[indexPath.row].type
-            cell.lblPrice?.text = "Price : \(filtered[indexPath.row].price!)"
+            cell.lblPrice?.text = "Price : \(StringFormatter.formatCurrency(value: filtered[indexPath.row].price!))"
             cell.lblStock?.text = "Stock : \(filtered[indexPath.row].quantity!)"
         } else {
             cell.lblName?.text = medicines[indexPath.row].name
             cell.lblType?.text = medicines[indexPath.row].type
-            cell.lblPrice?.text = "Price : \(medicines[indexPath.row].price!)"
+            cell.lblPrice?.text = "Price : \(StringFormatter.formatCurrency(value: medicines[indexPath.row].price!))"
             cell.lblStock?.text = "Stock : \(medicines[indexPath.row].quantity!)"
         }
         

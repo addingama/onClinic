@@ -13,12 +13,26 @@ class PharmacyDetailViewController: UIViewController {
     var medicine: Medicine = Medicine()
     
     @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblType: UILabel!
+    
+    @IBOutlet weak var lblPrice: UILabel!
+    
+    @IBOutlet weak var lblQuantity: UILabel!
+    @IBOutlet weak var lblUnit: UILabel!
+    @IBOutlet weak var lblExpirationDate: UILabel!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Detail"
 
         // Do any additional setup after loading the view.
         lblName.text = medicine.name!
+        lblType.text = medicine.type!
+        lblPrice.text = StringFormatter.formatCurrency(value: medicine.price!)
+        lblQuantity.text = "\(medicine.quantity!)"
+        lblUnit.text = medicine.unitName!
+        lblExpirationDate.text = medicine.dateExpiration!
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,5 +50,7 @@ class PharmacyDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }

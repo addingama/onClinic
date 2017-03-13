@@ -25,6 +25,7 @@
 		5D65E71C1E763CE5000FE7DC /* PharmacyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D65E71B1E763CE5000FE7DC /* PharmacyDetailViewController.swift */; };
 		5D65E71E1E7664DC000FE7DC /* PharmacyEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D65E71D1E7664DC000FE7DC /* PharmacyEditViewController.swift */; };
 		5D65E7201E76655B000FE7DC /* PharmacyCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D65E71F1E76655B000FE7DC /* PharmacyCreateViewController.swift */; };
+		5D65E7221E7699C1000FE7DC /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D65E7211E7699C1000FE7DC /* StringFormatter.swift */; };
 		5DAEF6BE1E6FD92200A3144F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAEF6BD1E6FD92200A3144F /* LaunchScreen.storyboard */; };
 		5DAEF6C41E6FEA7600A3144F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEF6C31E6FEA7600A3144F /* LoginViewController.swift */; };
 		5DAEF6C61E6FF6CB00A3144F /* DropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEF6C51E6FF6CB00A3144F /* DropShadowView.swift */; };
@@ -90,6 +91,7 @@
 		5D65E71B1E763CE5000FE7DC /* PharmacyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PharmacyDetailViewController.swift; path = App/Controllers/PharmacyDetailViewController.swift; sourceTree = "<group>"; };
 		5D65E71D1E7664DC000FE7DC /* PharmacyEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PharmacyEditViewController.swift; path = App/Controllers/PharmacyEditViewController.swift; sourceTree = "<group>"; };
 		5D65E71F1E76655B000FE7DC /* PharmacyCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PharmacyCreateViewController.swift; path = App/Controllers/PharmacyCreateViewController.swift; sourceTree = "<group>"; };
+		5D65E7211E7699C1000FE7DC /* StringFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringFormatter.swift; path = App/Helpers/StringFormatter.swift; sourceTree = "<group>"; };
 		5DAEF6BD1E6FD92200A3144F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DAEF6C31E6FEA7600A3144F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = App/Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		5DAEF6C51E6FF6CB00A3144F /* DropShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropShadowView.swift; path = App/Views/DropShadowView.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				5D32A26F1E70FA9800F7AB22 /* SessionManager.swift */,
 				5D5CDB601E71214000CA9ACF /* ApiManager.swift */,
 				5DDB01351E7280C8003BE350 /* DrawerActions.swift */,
+				5D65E7211E7699C1000FE7DC /* StringFormatter.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				5D0751891E7239C100BAC3E9 /* BaseViewController.swift in Sources */,
 				5DDB01441E7299ED003BE350 /* MedicineTableViewCell.swift in Sources */,
 				5D5CDB631E7127A300CA9ACF /* User.swift in Sources */,
+				5D65E7221E7699C1000FE7DC /* StringFormatter.swift in Sources */,
 				5D3CD4D41E6FD18100E0C2DD /* Constants.swift in Sources */,
 				5D65E71E1E7664DC000FE7DC /* PharmacyEditViewController.swift in Sources */,
 				5DAEF6C41E6FEA7600A3144F /* LoginViewController.swift in Sources */,

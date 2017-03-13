@@ -44,6 +44,7 @@ class Medicine {
         self.price = (json[MedicinesFields.PRICE.rawValue] as! NSString).doubleValue
         self.unitId = json[MedicinesFields.UNIT_ID.rawValue] as? Int
         self.unitName = (json[MedicinesFields.UNIT_NAME.rawValue] as! NSString) as String
+        self.dateExpiration = (json[MedicinesFields.DATE_EXPIRATION.rawValue] as! NSString) as String
     }
     
 }

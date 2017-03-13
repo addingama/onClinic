@@ -12,6 +12,7 @@ class PharmacyCreateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Add"
 
         // Do any additional setup after loading the view.
     }

@@ -15,6 +15,7 @@ class PharmacyEditViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Edit"
 
         // Do any additional setup after loading the view.
     }

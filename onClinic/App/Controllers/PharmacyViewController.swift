@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class PharmacyViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
 
@@ -107,7 +108,22 @@ class PharmacyViewController: BaseViewController, UITableViewDataSource, UITable
         let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { (action, indexPath) in
             let deleteAlert = UIAlertController(title: "Delete", message: "Are you sure", preferredStyle: UIAlertControllerStyle.alert)
             deleteAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
-                print("delete")
+                Alamofire.request(MedicineRouter.delete(self.selected_medicine.id!))
+                    .responseJSON { (response) in
+                        switch response.result {
+                        case .success(let value):
+                            let json = JSON(value)
+                            if json["status"] == true {
+                                self.showAlert(title: "Success", message: "Medicine deleted")
+                                self.medicines.remove(at: indexPath.row)
+                                self.tableView.reloadData()
+                            }
+                        case .failure(let error):
+                            self.showAlert(title: "Error", message: error)
+                        }
+                
+                }
+
             }))
             
             deleteAlert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action) in
@@ -157,6 +173,7 @@ class PharmacyViewController: BaseViewController, UITableViewDataSource, UITable
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true
+        searchBar.setShowsCancelButton(true, animated: true)
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
@@ -165,6 +182,8 @@ class PharmacyViewController: BaseViewController, UITableViewDataSource, UITable
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchActive = false
+        searchBar.setShowsCancelButton(false, animated: true)
+        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

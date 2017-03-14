@@ -31,10 +31,10 @@ enum MedicineRouter: URLRequestConvertible {
         switch self {
         case .index:
             return "/medicine"
-        case .update(let id, _):
-            return "/medicine/update?id=\(id)"
-        case .delete(let id):
-            return "/medicine/delete?id=\(id)"
+        case .update(_, _):
+            return "/medicine/update"
+        case .delete( _):
+            return "/medicine/delete"
         }
     }
     
@@ -42,13 +42,20 @@ enum MedicineRouter: URLRequestConvertible {
         let url = URL(string: Backend.apiURL)!
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue
-        
+
         switch self {
         case .index():
-            return try Alamofire.JSONEncoding.default.encode(urlRequest)
-        default:
-            return try Alamofire.JSONEncoding.default.encode(urlRequest)
-                }
+            urlRequest = try Alamofire.JSONEncoding.default.encode(urlRequest)
+        case .update(let id, let medicine):
+            let parameters: Parameters = ["id": id, "name": medicine.name!, "quantity": medicine.quantity!, "price": medicine.price!, "type": medicine.type!, "date_stock": medicine.dateStock!, "date_expiration": medicine.dateExpiration!, "unit_id": medicine.unitId!]
+            urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
+
+        case .delete(let id):
+            let parameters: Parameters = ["id": id]
+            urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
+        }
+
+        return urlRequest
         
     }
 }

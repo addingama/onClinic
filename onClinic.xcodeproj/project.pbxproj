@@ -32,6 +32,7 @@
 		5DAEF6C61E6FF6CB00A3144F /* DropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEF6C51E6FF6CB00A3144F /* DropShadowView.swift */; };
 		5DAEF6C91E6FFA0F00A3144F /* ChameleonFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DAEF6C71E6FFA0F00A3144F /* ChameleonFramework.framework */; };
 		5DAEF6CA1E6FFA0F00A3144F /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DAEF6C81E6FFA0F00A3144F /* SwiftValidator.framework */; };
+		5DBBD67D1E77B6AD006532D8 /* UnitRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBBD67C1E77B6AD006532D8 /* UnitRouter.swift */; };
 		5DDB01321E7278A3003BE350 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDB01311E7278A3003BE350 /* AppointmentViewController.swift */; };
 		5DDB01341E7278C0003BE350 /* ExaminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDB01331E7278C0003BE350 /* ExaminationViewController.swift */; };
 		5DDB01361E7280C8003BE350 /* DrawerActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDB01351E7280C8003BE350 /* DrawerActions.swift */; };
@@ -99,6 +100,7 @@
 		5DAEF6C51E6FF6CB00A3144F /* DropShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropShadowView.swift; path = App/Views/DropShadowView.swift; sourceTree = "<group>"; };
 		5DAEF6C71E6FFA0F00A3144F /* ChameleonFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChameleonFramework.framework; path = "Pods/../build/Release-iphoneos/ChameleonFramework/ChameleonFramework.framework"; sourceTree = "<group>"; };
 		5DAEF6C81E6FFA0F00A3144F /* SwiftValidator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftValidator.framework; path = "Pods/../build/Release-iphoneos/SwiftValidator/SwiftValidator.framework"; sourceTree = "<group>"; };
+		5DBBD67C1E77B6AD006532D8 /* UnitRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnitRouter.swift; path = App/Routes/UnitRouter.swift; sourceTree = "<group>"; };
 		5DDB01311E7278A3003BE350 /* AppointmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppointmentViewController.swift; path = App/Controllers/AppointmentViewController.swift; sourceTree = "<group>"; };
 		5DDB01331E7278C0003BE350 /* ExaminationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExaminationViewController.swift; path = App/Controllers/ExaminationViewController.swift; sourceTree = "<group>"; };
 		5DDB01351E7280C8003BE350 /* DrawerActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawerActions.swift; path = App/Helpers/DrawerActions.swift; sourceTree = "<group>"; };
@@ -259,12 +261,9 @@
 				5DAEF6C31E6FEA7600A3144F /* LoginViewController.swift */,
 				5DDB01311E7278A3003BE350 /* AppointmentViewController.swift */,
 				5DDB01331E7278C0003BE350 /* ExaminationViewController.swift */,
-				5DDB01371E72877C003BE350 /* PharmacyViewController.swift */,
+				5DBBD67E1E77B7FE006532D8 /* Pharmacy */,
 				5DDB01391E7287AB003BE350 /* CashierViewController.swift */,
 				5DDB013B1E728824003BE350 /* ComplaintViewController.swift */,
-				5D65E71B1E763CE5000FE7DC /* PharmacyDetailViewController.swift */,
-				5D65E71D1E7664DC000FE7DC /* PharmacyEditViewController.swift */,
-				5D65E71F1E76655B000FE7DC /* PharmacyCreateViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -305,11 +304,23 @@
 			name = ModelTests;
 			sourceTree = "<group>";
 		};
+		5DBBD67E1E77B7FE006532D8 /* Pharmacy */ = {
+			isa = PBXGroup;
+			children = (
+				5DDB01371E72877C003BE350 /* PharmacyViewController.swift */,
+				5D65E71B1E763CE5000FE7DC /* PharmacyDetailViewController.swift */,
+				5D65E71D1E7664DC000FE7DC /* PharmacyEditViewController.swift */,
+				5D65E71F1E76655B000FE7DC /* PharmacyCreateViewController.swift */,
+			);
+			name = Pharmacy;
+			sourceTree = "<group>";
+		};
 		5DDB01451E729B3A003BE350 /* Routes */ = {
 			isa = PBXGroup;
 			children = (
 				5DDB01461E729B56003BE350 /* SessionRouter.swift */,
 				5DDB01481E72A083003BE350 /* MedicineRouter.swift */,
+				5DBBD67C1E77B6AD006532D8 /* UnitRouter.swift */,
 			);
 			name = Routes;
 			sourceTree = "<group>";
@@ -612,6 +623,7 @@
 			files = (
 				5DDB01401E728F61003BE350 /* MedicineWrapper.swift in Sources */,
 				5D5CDB611E71214000CA9ACF /* ApiManager.swift in Sources */,
+				5DBBD67D1E77B6AD006532D8 /* UnitRouter.swift in Sources */,
 				5DDB013E1E728F46003BE350 /* Medicine.swift in Sources */,
 				5DDB01381E72877C003BE350 /* PharmacyViewController.swift in Sources */,
 				5DDB01471E729B56003BE350 /* SessionRouter.swift in Sources */,

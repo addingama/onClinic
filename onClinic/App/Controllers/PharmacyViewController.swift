@@ -119,7 +119,8 @@ class PharmacyViewController: BaseViewController, UITableViewDataSource, UITable
                                 self.tableView.reloadData()
                             }
                         case .failure(let error):
-                            self.showAlert(title: "Error", message: error)
+                            self.showAlert(title: "Error", message: "Something wrong");
+                            print(error)
                         }
                 
                 }
@@ -170,6 +171,8 @@ class PharmacyViewController: BaseViewController, UITableViewDataSource, UITable
                 
         }
     }
+    
+    // MARK: SearchBar protocol
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true

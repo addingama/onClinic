@@ -12,6 +12,7 @@ import Alamofire
 enum MedicineRouter: URLRequestConvertible {
     
     case index()
+    case create(Medicine)
     case update(Int, Medicine)
     case delete(Int)
     
@@ -19,6 +20,8 @@ enum MedicineRouter: URLRequestConvertible {
         switch self {
         case .index:
             return .get
+        case .create:
+            return .post
         case .update:
             return .put
         case .delete:
@@ -31,6 +34,8 @@ enum MedicineRouter: URLRequestConvertible {
         switch self {
         case .index:
             return "/medicine"
+        case .create:
+            return "/medicine/create"
         case .update(_, _):
             return "/medicine/update"
         case .delete( _):
@@ -46,6 +51,10 @@ enum MedicineRouter: URLRequestConvertible {
         switch self {
         case .index():
             urlRequest = try Alamofire.JSONEncoding.default.encode(urlRequest)
+        case .create(let medicine):
+            let parameters: Parameters = ["name": medicine.name!, "quantity": medicine.quantity!, "price": medicine.price!, "type": medicine.type!, "date_stock": medicine.dateStock!, "date_expiration": medicine.dateExpiration!, "unit_id": medicine.unitId!]
+            urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
+            
         case .update(let id, let medicine):
             let parameters: Parameters = ["id": id, "name": medicine.name!, "quantity": medicine.quantity!, "price": medicine.price!, "type": medicine.type!, "date_stock": medicine.dateStock!, "date_expiration": medicine.dateExpiration!, "unit_id": medicine.unitId!]
             urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)

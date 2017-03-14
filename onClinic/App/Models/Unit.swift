@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 enum UnitsFields: String {
     case ID = "id"
@@ -14,5 +15,16 @@ enum UnitsFields: String {
 }
 
 class Unit {
+    var id: Int?
+    var name: String?
+
+    init(json: [String: Any]) {
+        self.id = json[UnitsFields.ID.rawValue] as? Int
+        self.name = (json[UnitsFields.NAME.rawValue] as! NSString) as String
+    }
     
+    init(json: JSON) {
+        self.id = json[UnitsFields.ID.rawValue].int
+        self.name = json[UnitsFields.NAME.rawValue].string
+    }
 }

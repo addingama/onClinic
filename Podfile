@@ -10,7 +10,9 @@ target 'onClinic' do
   pod ‘Alamofire’, ‘~> 4.4’
   pod ’SideMenu’
   pod ‘PickerView’
-  pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'  
+  pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'
+  pod 'SwiftyJSON'
+  pod 'Eureka', '~> 2.0'
 
   target 'onClinicTests' do
     inherit! :search_paths

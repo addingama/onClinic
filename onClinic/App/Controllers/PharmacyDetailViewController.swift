@@ -32,7 +32,7 @@ class PharmacyDetailViewController: UIViewController {
         lblPrice.text = StringFormatter.formatCurrency(value: medicine.price!)
         lblQuantity.text = "\(medicine.quantity!)"
         lblUnit.text = medicine.unitName!
-        lblExpirationDate.text = medicine.dateExpiration!
+        lblExpirationDate.text = StringFormatter.formatDate(value: medicine.dateExpiration!)
     }
 
     override func didReceiveMemoryWarning() {

@@ -131,10 +131,11 @@ class PharmacyViewController: BaseViewController, UITableViewDataSource, UITable
     
     
     func getMedicines() {
+        tableView.activityIndicatorView.startAnimating()
         Alamofire.request(MedicineRouter.index())
             .responseJSON { (response) in
                  debugPrint(response)
-                
+                self.tableView.activityIndicatorView.stopAnimating()
                 if response.result.value == nil {
                     self.showAlert(title: "Error", message: "Something error with the server. Sorry for the inconvenience")
                 } else {

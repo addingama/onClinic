@@ -31,12 +31,10 @@ enum MedicineRouter: URLRequestConvertible {
         switch self {
         case .index:
             return "/medicine"
-        case .update(let id, let _):
+        case .update(let id, _):
             return "/medicine/update?id=\(id)"
         case .delete(let id):
             return "/medicine/delete?id=\(id)"
-        default:
-            return ""
         }
     }
     

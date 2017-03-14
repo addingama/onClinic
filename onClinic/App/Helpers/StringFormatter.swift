@@ -18,4 +18,12 @@ class StringFormatter {
         let result = formatter.string(from: value as NSNumber)
         return "Rp. \(result!),-"
     }
+    
+    static func formatDate(value: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: value)
+        dateFormatter.dateFormat = "d MMMM yyyy"
+        return dateFormatter.string(from: date!)
+    }
 }

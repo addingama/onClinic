@@ -3,16 +3,20 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - Eureka (2.0.1)
   - PickerView (0.3.0)
   - SideMenu (2.2.0)
   - SwiftValidator (4.0.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - Eureka (~> 2.0)
   - PickerView
   - SideMenu
   - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
+  - SwiftyJSON
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -32,10 +36,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Eureka: ae837bb1dfae0c07bc1bda7aeef87876eeb537c2
   PickerView: 1430ac060eba5f56c3d5e27ef0e47e280d083c9b
   SideMenu: eeff6b85456c5c6e14165655691d2033f6b24969
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 3db5dfaff4a10f204642cdc9c35586b2829f9793
+PODFILE CHECKSUM: 71bc8c2b309d3cf3c88b49820f28e8a8595a70eb
 
 COCOAPODS: 1.2.0
